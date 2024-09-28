@@ -66,6 +66,7 @@
                                         <th>Student ID</th>
                                         <th>Dept.</th>
                                         <th>Session</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
 
@@ -91,6 +92,24 @@
 
                                             <td>{{ $data->department }}</td>
                                             <td>{{ $data->session }}</td>
+                                            <td>
+                                                
+
+                                                <span style="display: inline-flex; flex-direction: row; gap: 15px;">
+                                                    
+                                                  
+
+                                                    <form action="{{ route('delete.student') }}" method="POST">
+                                                        @csrf
+
+                                                        <input type="hidden" name="id" value="{{ $data->id }}">
+                                                        <button class="btn btn-danger btn-sm waves-effect btn-label waves-light" onclick="return confirm('Are you sure to delete ?');"> 
+                                                            <i class="bx bx-x-circle label-icon"></i> Delete
+                                                        </button>
+                                                    </form>
+                                                    {{-- {{ $data->id }} --}}
+                                                </span>   
+                                            </td>
 
                                         </tr>
                                     @endforeach

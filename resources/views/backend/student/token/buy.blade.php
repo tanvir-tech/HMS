@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     {{-- @dd($current); --}}
-                    @if($current > 1 && $current < 23)
+                    @if($current > 1 && $current < 24)
                         @if(is_null($check_tomorrow))
                             <form class="needs-validation" action="{{ route('store.token') }}" method="post" novalidate="">
                                 @csrf

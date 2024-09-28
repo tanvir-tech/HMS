@@ -45,6 +45,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 		Route::get('/approval-list', [AdminToolsController::class, 'approval_list'])->name('approval.list');
 		Route::post('/approve-student', [AdminToolsController::class, 'approve_student'])->name('approve.student');
 		Route::post('/decline-student', [AdminToolsController::class, 'decline_student'])->name('decline.student');
+		Route::post('/delete-student', [AdminToolsController::class, 'delete_student'])->name('delete.student');
 		
 		Route::get('/roomlist', [AdminToolsController::class, 'room_list'])->name('room.list');
 		Route::get('/roomsearch', [AdminToolsController::class, 'room_search'])->name('room.search');

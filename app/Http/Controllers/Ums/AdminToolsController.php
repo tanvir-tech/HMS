@@ -117,6 +117,16 @@ class AdminToolsController extends Controller
         return redirect()->back();
     }
 
+    public function delete_student(Request $request)
+    {
+        $delete = User::where(['id' => $request->id, 'role' => 'Student'])->first();
+
+        $delete->delete();
+
+        Session::flash('error', 'Student Deleted Permanently !');
+        return redirect()->back();
+    }
+
     public function all_reviews()
     {
         $reviews = Review::orderBy('created_at', 'desc')->get();
