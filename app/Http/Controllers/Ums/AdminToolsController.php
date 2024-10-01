@@ -26,7 +26,13 @@ class AdminToolsController extends Controller
 
     public function dashboard()
     {
-    	return view('backend.administrator.index');
+        $totalUsers = User::count(); // Get total count of users
+        $totalNotices = Notice::count();
+        $totalReviews = Review::count(); 
+        $totalComplains = Complain::count(); 
+
+        return view('backend.administrator.index', compact('totalUsers','totalNotices', 'totalReviews', 'totalComplains',));
+    	// return view('backend.administrator.index');
     }
 
     public function add_student()

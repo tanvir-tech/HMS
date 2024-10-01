@@ -9,17 +9,17 @@
                     Complain Detail
                 </h3>
             </div>
-            <div class="card text-center bg-secondary text-white">
+            <div class="card text-center bg-warning text-white">
                 <div class="card-body">
                     
                     <Div class="container p-5">
-                        <h3 class="text-center text-light" id="noticeTitle" name="noticeTitle">
+                        <h2 class="text-center text-light" id="noticeTitle" name="noticeTitle">
                             {{ $complain['title'] }}
-                        </h3>
+                        </h2>
 
-                        <p class="text-danger">
-                            Posted at: {{ $complain['created_at'] }} by User Name : {{ $complain->user->name }}
-                        </p>
+                        <h4 class="text-danger">
+                            Posted at: {{ $complain['created_at'] }} -- Name : {{ $complain->user->name }}
+                        </h4>
 
                         <br>
                         <p class="text-start" id="generalNotice" id="noticeDescription" name="noticeDescription">

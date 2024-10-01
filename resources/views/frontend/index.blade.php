@@ -11,7 +11,7 @@
                 <div class="col-lg-5">
                     <div class="text-white-50">
                         <h1 class="text-white font-weight-semibold mb-3 hero-title">{{ config('app.name') }} - Online Application</h1>
-                        <p class="font-size-14" style="color: #ddd !important;">The purpose of the application is to decrease the hassales of the students of MBSTU while purchasing their lunch or dinner food tokens. It's a complete solution to buy hall's food token in online. The platform is built to digitilize the purchasing system of food tokens of the halls. </p>
+                        <p class="font-size-14" style="color: #ddd !important;">The purpose of the application is to decrease the hassales of the students of MBSTU while purchasing their lunch or dinner food tokens and other services from students halls. It's a complete solution to buy hall's food token in online. The platform is built to digitilize the hall management of MBSTU. </p>
                         
                         <div class="button-items mt-4">
                             @if(Auth::user())
